@@ -103,15 +103,14 @@ mod tests {
     use super::*;
 
     #[test]
-    fn default_config_reg_1() {
+    fn default_config_reg_4() {
         let config: Value = Value::default();
-        assert_eq!(config.to_value(), 0x67);
+        assert_eq!(config.to_value(), 0x0);
     }
 
     #[test]
     fn parse_config_reg_4_from_u8_1() {
         let config: Value = Value::from(0x20);
-        //assert_eq!(config.to_value(), 0x6F);
-        println!("{:?}", config);
+        assert_eq!(config.to_value(), 0x20);
     }
 }
